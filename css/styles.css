@@ -1,6 +1,18 @@
 * {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
   background-color: #111111;
-  font-family: "Roboto";
+  color: white;
+  font-family: Poppins;
+}
+
+body > * {
+  padding: 50px 75px;
 }
 .logo {
   color: red;
@@ -32,7 +44,7 @@ a {
   color: red;
   font-size: 32px;
   letter-spacing: 1px;
-  margin-bottom: -50px;
+  margin-bottom: -10px;
 }
 #mainP {
   font-size: 24px;
@@ -88,26 +100,90 @@ a {
 #know-more-active {
   font-size: 16px;
 }
-.experience {
+
+a {
+  text-decoration: none;
+  color: white;
+}
+main {
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    #181818 0%,
+    #181818 50%,
+    #111111 50%,
+    #111111 100%
+  );
+  gap: 5em;
+}
+
+.projects {
+  gap: 1em;
+  justify-content: center;
+
   display: flex;
-  object-fit: contain;
-  justify-content: space-around;
+  flex-direction: row;
 }
 
-#exp {
-  color: #ef4040;
+.project {
+  display: flex;
+  flex-direction: column;
+  background-color: #1e1e1e;
+  width: 325px;
+  padding: 50px;
+  gap: 1em;
+}
 
-  font-size: 62px;
+.about {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4em;
+  text-align: center;
+
+  padding: 75px 0px;
+}
+
+.stats {
+  display: flex;
+  flex-direction: row;
+
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.stat {
+  padding: 30px 20px;
+  background-color: #1e1e1e;
+  width: calc(50% - 15px);
+}
+.stat h2 {
+  font-size: 50px;
+  color: #ef4040;
+}
+
+.stat p {
+  font-size: 20px;
+  opacity: 75%;
+}
+
+.experience {
+  width: 500px;
+}
+
+.experience h2 {
+  font-size: 100px;
   font-weight: 900;
+  color: #ef4040;
+  width: 100%;
 }
 
-#exp-h3 {
-  color: #fff;
+.experience h3 {
+  font-size: 30px;
+  font-weight: 600;
 }
-#small-exp {
-  color: #ef4040;
-  font-size: 40px;
-}
+
 .right {
   display: flex;
   height: 160px;
@@ -216,4 +292,57 @@ footer {
   position: relative;
   top: 40px;
   left: 40px;
+}
+
+@media screen and (max-width: 786px) {
+  body > * {
+    padding: 25px;
+  }
+
+  .projects {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text {
+    width: 100%;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  .red-heading {
+    font-size: 18.5px;
+    text-align: center;
+  }
+
+  .visual {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .mainP {
+    text-align: center;
+    font-size: 14px;
+  }
+  .left-section {
+    height: 650px;
+    width: 100%;
+  }
+
+  .part {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card .cards-img .section {
+    display: flex;
+    flex-direction: column;
+  }
 }
